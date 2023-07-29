@@ -196,4 +196,151 @@ document.write(bebidas);
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////  BUCLES  ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
+// let numero1 = 1;
 
+// //IF - el bulce solo se cumple una vez
+
+// if( numero1 < 10){
+//     numero1++;
+//     document.write(numero1)
+// }
+
+// WHILE - valida y luego ejecuta repite el bucle hasta que sea falsa la condicion
+
+// while(numero1 < 100) {
+//     numero1++;
+//     document.write(numero1 + "<br>");
+//     if( numero1 == 20) {
+//         break;
+//     }
+// }
+
+//DO-WHILE - ejecuta luego valida
+
+// do {
+//     document.write(numero1 + "<br>")
+//     numero1++;
+// } while (numero1 < 10) 
+
+/////////////////////////////////////////////////BUCLE FOR///////////////////////////////////////////////////////////////////////////////
+
+//FOR - ejecuta las veces segun las condiciones (delcaracion let x = valor; inicializacion x < valor; aumento o decremento ++x++ o --x--)
+
+// for (let i = 6; i >= 0; i--) {
+//     document.write(i + "<br>");
+// }
+
+/*
+for (let i = 0; i < 20; i++) {
+    if(i == 18){
+        continue;
+    }else if (i == 18) {
+        break;
+    }else{
+        document.write(i + "<br>");
+    }
+}
+*/
+
+
+// let frutas = ["papaya ", "fresa ", "banano ", "manzana ", "pitajaya ", "mango "];
+
+/////////////////////////////////////////////////BUCLE FOR IN//////////////////////////////////////////////////////////////////
+/*
+for (fruta in frutas) {
+    document.write(fruta);
+}
+document.write("<br>")
+
+/////////////////////////////////////////////////BUCLE FOR IN//////////////////////////////////////////////////////////////////
+for (fruta of frutas) {
+    document.write(fruta);
+}
+
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
+
+////////////////////////////////////////////////////// PRACTICA /////////////////////////////////////////////////////////////////
+let empleados = ["Oscar", "David", "Daniela", "Cristian", "Miguel"];
+let locales = ["Quicentro", "El jardin", "San francisco", "Rio centro", "Plaza Las Americas"];
+let restaurantes = [locales, empleados];
+
+for (let restaurante in restaurantes) {
+    console.log(restaurante)
+    while (restaurante < 2) {
+        if (restaurante == 0) {
+            for (let local of locales) {
+                document.write(local + "<br>");
+            }
+        } else {
+            for (let empleado of empleados) {
+                document.write(empleado + "<br>");
+            }
+        }
+        ++restaurante;
+        break;
+    }
+}
+document.write("FIN");
+*/
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////  FUNCIONES  ////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*
+// CREAR FUNCION
+function saludo() {
+    respuesta = prompt("hola soy Oscar, ¿que tal tu dia?");
+    if (respuesta == "bien") {
+        alert("me alegro");
+    } else {
+        alert("una pena");
+    }
+}
+
+//INSTANCIAR LA FUNCION
+saludo();
+*/
+
+/////////////////////////////////////////////////// practica /////////////////////////////////////////////////////
+/*
+function saludar() {
+    respuesta = prompt("Hola, ¿que hora es?");
+    if (respuesta > 0 || respuesta == 0 && respuesta < 12) {
+        alert("Buenos días!");
+    } else if (respuesta > 12 || respuesta == 12 && respuesta < 18) {
+        alert("Buenas tardes!");
+    } else if (respuesta >= 18 && respuesta < 0) {
+        alert("¡Es de noche!");
+    } else if (respuesta == "no" || respuesta == "NO" || respuesta == "No" || respuesta == "nO") {
+        alert("ok, la proxima sera");
+    } else {
+        alert("Lo siento no entiendo lo que dijiste.");
+    }
+}
+saludar();
+*/
+/////////////////////////////////////////////////// PARAMENTROS DE LA FUNCION /////////////////////////////////////////////////////
+/*
+//se crea la funcion
+function suma(nombre, num1, num2) {
+    let result = (num1 + num2);
+    let respuesta = `Aqui esta la suma solicitada ${nombre}, el resultado es: <b>${result}</b>`; 
+    document.write(respuesta);
+}
+
+//se solicitan los parametros necesarios
+let nombre = prompt("Hola, ¿como te llamas?");
+let numero1 = prompt("dame el primer numero");
+let numero2 = prompt("dame el segundo numero");
+
+//se llama al metodo y se asignan todos sus parametros
+suma(nombre,parseFloat(numero1), parseFloat(numero2));
+*/
+////////////////////////////////////////////// PRACTICA EJERCICIO ////////////////////////////////////////////////////////////////////
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
