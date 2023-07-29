@@ -339,8 +339,35 @@ let numero2 = prompt("dame el segundo numero");
 //se llama al metodo y se asignan todos sus parametros
 suma(nombre,parseFloat(numero1), parseFloat(numero2));
 */
-////////////////////////////////////////////// PRACTICA EJERCICIO ////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////// PRACTICA 1 EJERCICIO : HORA Y EDAD ////////////////////////////////////////////////////////////////////
+/*
+const validarEdad = (edad) => {
+    if (edad >= 18) {
+        document.write(`Eres mayor de edad, tienes ${edad} años`);
+    } else if (edad < 18) {
+        document.write(`Tienes ${edad} años. No eres mayor de edad`);
+    } else {
+        alert("no entiendo, vuelve a repetirme por favor")
+    }
+}
+
+const validarHora = (hora) => {
+    if (hora > 4 && hora < 20) {
+        alert("Estamos cerrados o un no abrimos");
+    } else if (hora >= 20 && hora > 0) {
+        let edad = prompt("Que edad tienes?");
+        validarEdad(edad);
+        document.write("<br>aun entras gratis ");
+    } else if (hora >= 0 && hora < 4) {
+        let edad = prompt("Que edad tienes?");
+        validarEdad(edad);
+        document.write("<br>El cover es de $10 usd");
+    }
+}
+let hora = prompt("Que hora es?");
+validarHora(hora);
+*/
+
+//////////////////////////////////////////// PRACTICA 2 EJERFCICIO : NOTA Y ASISTENCIA /////////////////////////////////////////////////////////////////
 
 
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
