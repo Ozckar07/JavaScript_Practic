@@ -819,3 +819,37 @@ app4.mostrar();
 // document.write(resultado);
 
 ///////////////////////////////////////////////// METODOS DE ARRAY ///////////////////////////////////////////////////////
+
+/*
+//Crear en array a manipular
+let nombres = ["<br>Oscar", "<br>André", "<br>David", "<br>Morelia", "<br>Victor", "<br>Luis", "<br>Kry"];
+document.write(nombres);
+// TRANSFORMADORES //
+// let resultado = nombres.pop();
+// let resultado = nombres.shift();
+// let resultado = nombres.push("<br>jairo", "<br>Alicia");
+// let resultado = nombres.reverse();
+// let resultado = nombres.unshift("Alicia", "<br>Jairo");
+// let resultado = nombres.sort();
+// let resultado = nombres.splice(0,2,"Carlos","<br>Alejandro");
+
+// ACCESORES //
+// todos los metodos de cadena
+// let resultado = nombres.join("Elemento: -");
+// let resultado = nombres.slice(0,5);
+
+// REPETICION //
+// let resultado = nombres.filter(
+//     nombres => {
+//         if (nombres.length > 6) {
+//             document.write("<br>elementos");
+//         }
+//     });
+// let resultado = nombres.forEach(nombres => nombres.length > 10);
+
+document.write("<br><br> Elemento Editado : " + resultado + "<br><br>");
+document.write(nombres);
+
+*/
+
+
