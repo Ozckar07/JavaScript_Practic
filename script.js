@@ -790,4 +790,32 @@ app3.mostrar();
 app4.mostrar();
 */
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////// METODOS DE CADENA ///////////////////////////////////////////////////////
+
+// let cadena = "Hola cadena de prueba prueba prueba prueba prueba <br>";
+// let numeros = 0123456789;
+
+// resultado = cadena.concat("hola");
+// resultado = cadena.startsWith("hola");
+// resultado = cadena.endsWith("prueba");
+// resultado = cadena.includes("de");
+// resultado = cadena.indexOf("pr");
+// resultado = cadena.lastIndexOf("prueba");
+
+// resultado = cadena.padStart(100,"00000");
+// resultado = cadena.padEnd(100, "0000000");
+// resultado = cadena.repeat(5);
+
+// resultado = cadena.split(" ");
+// resultado = cadena.substring(5,11);
+// resultado = cadena.toLowerCase();
+// resultado = cadena.toUpperCase();
+// resultado = numeros.toString();
+// resultado = cadena.trimEnd();
+// resultado = cadena.trimStart();
+
+// resultado = cadena.valueOf();
+
+// document.write(resultado);
+
+///////////////////////////////////////////////// METODOS DE ARRAY ///////////////////////////////////////////////////////
