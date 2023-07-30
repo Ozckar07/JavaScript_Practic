@@ -369,5 +369,98 @@ validarHora(hora);
 */
 
 //////////////////////////////////////////// PRACTICA 2 EJERFCICIO : NOTA Y ASISTENCIA /////////////////////////////////////////////////////////////////
+/*
+let cantidad = prompt("Cuantos alumnos hay?");
+let alumnosTotales = [];
+
+for (i = 0; i < cantidad; i++) {
+    alumnosTotales[i] = [prompt("Nombre del alumno " + (i+1)), 0];
+}
+
+const tomarAsistencia = (nombre, p) => {
+    let presencia = prompt(nombre);
+    if( presencia == "p" || presencia == "P"){
+        alumnosTotales[p][1]++;
+    }
+}
+for (let i = 0; i < 30; i++){
+    for (alumno in alumnosTotales){
+        tomarAsistencia(alumnosTotales[alumno][0],alumno);
+    }
+}
+
+for (alumno in alumnosTotales) {
+    let resultado = `${alumnosTotales[alumno][0]}: <br>
+    _______Presentes: ${alumnosTotales[alumno][1]} <br>
+    _______Ausencias: ${30 - parseInt(alumnosTotales[alumno][1])}`;
+    if(30 - alumnosTotales[alumno][1] > 18) {
+        resultado+= "<b style='color:red'> REPROBADO POR ASISTENCIAS</b> <br>";
+    }else {
+        resultado+= "<br><br>";
+    }
+    document.write(resultado);
+}
+*/
+
+////////////////////////////////////////// PRACTICA: CALCULADORA BASICA ///////////////////////////////////////////
+/*
+const sumar = (num1, num2) => {
+    return (num1 + num2);
+}
+const restar = (num1, num2) => {
+    return (num1 - num2);
+}
+const multiplicar = (num1, num2) => {
+    return (num1 * num2);
+}
+const dividir = (num1, num2) => {
+    return (num1 / num2);
+}
+
+alert("¿Que operacion desea realizar?");
+let op = prompt("sumar=1 ||| restar=2 ||| multiplicar=3 ||| dividir=4 ||| Salir=0");
+
+if (op > 0 && op != 0 && op < 4 ) {
+    let num1 = parseFloat(prompt("Primer numero"));
+    let num2 = parseFloat(prompt("Segundo numero"));
+    switch (op) {
+        case "1":
+            alert(`Suma de los dos números es : ${sumar(num1, num2)} `);
+            break;
+        case "2":
+            alert(`Resta de dos numero es: ${restar(num1, num2)} `);
+            break;
+        case "3":
+            alert(`Multiplicacion de dos numeros es: ${multiplicar(num1, num2)}`);
+            break;
+        case "4":
+            alert(`Dividicion de un numero entre otro es: ${dividir(num1, num2).toFixed()}`);
+            break;
+        default:
+            document.write('Opción no valida');
+            break;
+    }
+} else {
+    alert('Opcion invalida, o cancelada.');
+}
+*/
 
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////// PROGRAMACION ORIENTADA A OBJETOS ////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
