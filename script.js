@@ -451,16 +451,207 @@ if (op > 0 && op != 0 && op < 4 ) {
 ///////////////////////// PROGRAMACION ORIENTADA A OBJETOS ////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
+/*
+//CREACION DEL OBJETO COMO CLASE
+class Animal {
+    //SE CREA EL CONSTRUCTOR
+    constructor(responable, nombre, especie, edad, color, peso) {
+        this.responable = responable;
+        this.nombre = nombre;
+        this.especie = especie;
+        this.edad = edad;
+        this.color = color;
+        this.peso = peso;
+        this.info = `<b>La mascota del responsable ${responable}:</b> <br> 
+        nombre: <b>${this.nombre}</b> <br>
+        especie: <b>${this.especie}</b> <br>
+        edad: <b>${this.edad}</b> <br>
+        color: <b>${this.color}</b> <br>
+        peso: <b>${this.peso}</b> <br><br>`;
+    }
+    //DECLARACION DE LOS METODOS
+    verInfo() {
+        return document.write(this.info);
+    }
+    sonido(){
+        if(this.especie == "perro") {
+            document.write("wowu! , wowu! <br>");
+        } else if (this.especie == "gato") {
+            document.write("miau miau <br>");
+        }else if (this.especie == "pajaro") {
+            document.write("Pio Pio <br>");
+        }else {
+            document.write("aun no conozco la especie <br>");
+        }
+    }
+}
+
+let perro = new Animal("Andre y Oscar", "Rio ", "perro", 4, "blanco", "8.6kg");
+let gato = new Animal("Alejandro", "Jupiter ", "gato", 3, "Naranja con Blanco", "6.3kg");
+let perro2 = new Animal("Mirian", "Simon", "perro", 2, "Cafe con blanco", "2.4kg");
+let pajaro = new Animal("Yolanda", "Paquita", "pajaro", 3, "Verde con cuerro amarillo", "1.6kg");
+
+perro.verInfo();
+gato.sonido();
+pajaro.sonido();
+*/
+
+///////////////////////////////////// HERENCIA extends /////////////////////////////////////////////////////////
+/*
+class Animal {
+    //SE CREA EL CONSTRUCTOR
+    constructor(responable, nombre, especie, edad, color, peso) {
+        this.responable = responable;
+        this.nombre = nombre;
+        this.especie = especie;
+        this.edad = edad;
+        this.color = color;
+        this.peso = peso;
+        this.info = `<b>La mascota del responsable ${responable}:</b> <br> 
+        nombre: <b>${this.nombre}</b> <br>
+        especie: <b>${this.especie}</b> <br>
+        edad: <b>${this.edad}</b> <br>
+        color: <b>${this.color}</b> <br>
+        peso: <b>${this.peso}</b> <br><br>`;
+    }
+    //DECLARACION DE LOS METODOS
+    verInfo() {
+        return document.write(this.info);
+    }
+    sonido(){
+        if(this.especie == "perro") {
+            document.write("wowu! , wowu! <br>");
+        } else if (this.especie == "gato") {
+            document.write("miau miau <br>");
+        }else if (this.especie == "pajaro") {
+            document.write("Pio Pio <br>");
+        }else {
+            document.write("aun no conozco la especie <br>");
+        }
+    }
+}
+class Perro extends Animal {
+    constructor(responable, especie, nombre, edad, color, peso, raza ) {
+        super(responable, especie, nombre, edad, color, peso);
+        this.raza = raza;
+    }
+    static ladrar(){
+        alert("está ladrando");
+    }
+}
+
+//INSTANCIACION DEL OBJETO EN VARIAS FROMAS
+let perro = new Perro("Andre y Oscar", "perro", "Rio ", 4, "blanco", "8.6kg", "Castellano");
 
 
-
-
-
-
-
-
-
-
-
+//INTANCIACION DEL METODO DEPENDIANDO DE LOS DATOS DE CADA UNO
+perro.ladrar();
+perro.verInfo();
+*/
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
+/*
+class Animal {
+    //SE CREA EL CONSTRUCTOR
+    constructor(responable, nombre, especie, edad, color, peso) {
+        this.responable = responable;
+        this.nombre = nombre;
+        this.especie = especie;
+        this.edad = edad;
+        this.color = color;
+        this.peso = peso;
+        this.info = `<b>La mascota del responsable ${responable}:</b> <br> 
+        nombre: <b>${this.nombre}</b> <br>
+        especie: <b>${this.especie}</b> <br>
+        edad: <b>${this.edad}</b> <br>
+        color: <b>${this.color}</b> <br>
+        peso: <b>${this.peso}</b> <br><br>`;
+    }
+    //DECLARACION DE LOS METODOS
+    verInfo() {
+        return document.write(this.info);
+    }
+    sonido(){
+        if(this.especie == "perro") {
+            document.write("wowu! , wowu! <br>");
+        } else if (this.especie == "gato") {
+            document.write("miau miau <br>");
+        }else if (this.especie == "pajaro") {
+            document.write("Pio Pio <br>");
+        }else {
+            document.write("aun no conozco la especie <br>");
+        }
+    }
+}
+
+/////////////////////////////////// GETTERS Y SETTERS //////////////////////////////////////////////////
+class Perro extends Animal {
+    constructor(responable, nombre, especie, edad, color, peso, raza ) {
+        super(responable,  nombre, especie, edad, color, peso);
+        this.raza = null;
+    }
+    set setRaza(raza) {
+        this.raza = raza;
+    }
+    get getRaza(){
+        return this.raza;
+    }
+    static ladrar(){
+        alert("está ladrando");
+    }
+}
+
+const perro = new Perro("André y Oscar", "Rio", "perro", 4, "blanco", "8.6kg");
+perro.setRaza = prompt(` Que raza es el ${perro.especie} con nombre ${perro.nombre} ?`);
+
+document.write(perro.verInfo());
+document.write(`Raza: <b>${perro.getRaza}</b>`);
+*/
+
+///////////////////////////////////// EJERCICIO PRACTICO : CELULAR //////////////////////////////////
+class Celular {
+    constructor(color, peso, resolucion, Camara, ram) {
+        this.color = color;
+        this.peso = peso;
+        this.resolucion = resolucion;
+        this.camara = Camara;
+        this.ram = ram;
+        this.verInfo = `este equipo es de color ${this.color} <br>
+                        un peso de: ${this.peso} <br>
+                        con una resolucion en pantalla de: ${this.resolucion} <br>
+                        resolucion en camara de: ${this.camara} <br>
+                        memoria RAM del dispositivo: ${this.ram}`;
+    }
+    verInfo() {
+        document.write(this.verInfo);
+    }
+
+    static prender() {
+        document.write('Iniciando celular  <br>');
+    }
+    static reiniciar() {
+        document.write('Reiniciando celular <br>');
+    }
+    static apagar() {
+        document.write('Apagando celular <br>');
+    }
+    static foto() {
+        document.write('Tomando foto <br>');
+    }
+    static video() {
+        document.write('Grabando video <br>');
+    }
+
+}
+const apple = new Celular("Negro", "256 gr", "4K", "32 MP", "16 GB");
+
+apple.verInfo();
+Celular.reiniciar();
+Celular.apagar();
+Celular.foto();
+Celular.video();
+
+
+
+
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
