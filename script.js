@@ -607,22 +607,23 @@ document.write(perro.verInfo());
 document.write(`Raza: <b>${perro.getRaza}</b>`);
 */
 
-///////////////////////////////////// EJERCICIO PRACTICO : CELULAR //////////////////////////////////
+///////////////////////////////////// EJERCICIO PRACTICO : COMPARAR CELULARES //////////////////////////////////
+/*
 class Celular {
-    constructor(color, peso, resolucion, Camara, ram) {
+    constructor(color, peso, resolucion, camara, ram) {
         this.color = color;
         this.peso = peso;
         this.resolucion = resolucion;
-        this.camara = Camara;
+        this.camara = camara;
         this.ram = ram;
-        this.verInfo = `este equipo es de color ${this.color} <br>
-                        un peso de: ${this.peso} <br>
-                        con una resolucion en pantalla de: ${this.resolucion} <br>
-                        resolucion en camara de: ${this.camara} <br>
-                        memoria RAM del dispositivo: ${this.ram}`;
+        this.info = `este equipo es de color:  <b>${this.color}</b> <br>
+                    un peso de: <b>${this.peso}</b> <br>
+                    con una resolucion en pantalla de: <b>${this.resolucion}</b> <br>
+                    resolucion en camara de: <b>${this.camara}</b> <br>
+                    memoria RAM del dispositivo: <b>${this.ram}</b> <br><br>`;
     }
     verInfo() {
-        document.write(this.verInfo);
+        document.write(this.info);
     }
 
     static prender() {
@@ -643,15 +644,150 @@ class Celular {
 
 }
 const apple = new Celular("Negro", "256 gr", "4K", "32 MP", "16 GB");
+const huawei = new Celular("Amarillo", "210 gr", "1008 HD", "16 MP", "18 GB");
+const samsung = new Celular("Azul", "190 gr", "4K", "24 MP", "30 GB");
 
 apple.verInfo();
-Celular.reiniciar();
-Celular.apagar();
-Celular.foto();
-Celular.video();
+huawei.verInfo();
+samsung.verInfo();
+// Celular.reiniciar();
+// Celular.apagar();
+// Celular.foto();
+// Celular.video();
 
 
 
+//////////////////////////////////// EJERCICIO PRACTICO: TIENDA DE CELULARES /////////////////////////////////
+class AltaGama extends Celular {
+    constructor(color, peso, resolucion, camara, ram, efecto, seguridad, lentes) {
+        super(color, peso, resolucion, camara, ram) //
+        this.efecto = efecto;
+        this.seguridad = seguridad;
+        this.lentes = lentes;
+        this.info2 = `este equipo es de color:  <b>${this.color}</b> <br>
+        un peso de: <b>${this.peso}</b> <br>
+        con una resolucion en pantalla de: <b>${this.resolucion}</b> <br>
+        resolucion en camara de: <b>${this.camara}</b> <br>
+        memoria RAM del dispositivo: <b>${this.ram}</b> <br>
+        tiene un efecto : <b>${this.efecto}</b> <br>
+        y su nivel de seguridad es de: <b>${this.seguridad}</b>.<br>
+        Cuenta con leste: <b>${this.lentes}</b><br><br>`;
+    }
+    set setEfecto(efecto){
+        this.efecto = efecto;
+    }
+    get getEfecto(){
+        return this.efecto;
+    }
+    set setSeguridad(seguridad){
+        this.seguridad = seguridad;
+    }
+    get getSeguridad(){
+        return this.seguridad;
+    }
+    set setLentes(lentes){
+        this.lentes = lentes;
+    }
+    get getLentes(){
+        return this.lentes;
+    }
+    verInfo2(){
+        document.write(this.info2);
+    }
+    
+}
+
+let onePlus = new AltaGama("Rosa", "290 gr", "UHD - 4K - 8k", "36 MP", "32 GB", "Video Camara lenta", "Reconocimiento Facial y touchId", "4 Lentes traseros y 2 delanteros");
+let pixel = new AltaGama("Verde", "300 gr", "UHD - 4K", "36 MP", "32 GB", "Video Camara lenta", "Reconocimiento Facial", "4 Lentes"); 
 
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////
+onePlus.verInfo2();
+pixel.verInfo2();
+*/
+
+
+/////////////////////////////EJERCICIOS PRACTICO : COMPARAR APPs /////////////////////////////////////////////
+/*
+class App {
+    constructor(nombre, descargas, puntuacion, peso) {
+        this.nombre = nombre;
+        this.descargas = descargas;
+        this.puntuacion = puntuacion;
+        this.peso = peso;
+        this.iniciada = false;
+        this.instalada = false;
+        this.info = `<b>${this.nombre}</b> <br><br>
+                    No. descargas: <b>${this.descargas}</b> <br>
+                    Puntuacion: <b>${this.puntuacion}</b> <br>
+                    Peso: <b>${this.peso}</b> <br><br>`
+    }
+    mostrar() {
+        document.write(this.info);
+    }
+
+    instalar() {
+        if (this.instalada == false) {
+            this.instalada = true;
+            if (this.instalada == true) {
+                Document.write("ya esta instalada");
+            } else {
+                document.write("Instalando <br>");
+            }
+        } else {
+            alert("a ocurrido un error al instalar");
+        }
+    }
+
+    abrir() {
+        if (this.iniciada == false) {
+            this.iniciada = true;
+            if (this.iniciada == true) {
+                document.write("ya esta abierta");
+            } else {
+                document.write("Abriendo <br>");
+            }
+        } else {
+            alert("a ocurrido un error al abrir");
+        }
+    }
+
+    cerrar() {
+        if (this.iniciada == true) {
+            this.iniciada = false;
+            if (this.iniciada == true) {
+                document.write("Cerrando <br>");
+            } else {
+                document.write("no está iniciado");
+            }
+        } else {
+            alert("algo salio mal al cerrar la aplicacion");
+        }
+    }
+
+    desinstalar() {
+        if (this.instalada == true) {
+            this.instalada = false;
+            if (this.instalada == true) {
+                document.write("Desinstalando<br>");
+            } else {
+                document.write("La aplicación no ha sido instalada.");
+            }
+        } else {
+            alert("Algo salio mal al desinstalar");
+        }
+    }
+
+}
+// "","",""
+const app1 = new App("PedidosYa", "1.525.846 descargas", "4.8 estrellas", "300 MB");
+const app2 = new App("Glovo", "825.846 descargas", "3.8 estrellas", "350 MB");
+const app3 = new App("Rappi", "1.000.846 descargas", "4.5 estrellas", "400 MB");
+const app4 = new App("Delivery", "25.846 descargas", "2.8 estrellas", "600 MB");
+
+app1.mostrar();
+app2.mostrar();
+app3.mostrar();
+app4.mostrar();
+*/
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
