@@ -853,3 +853,111 @@ document.write(nombres);
 */
 
 
+/////////////////////////// OBJETOS MATH - BASICOS ////////////////////////////////////////////////////
+// METODOS  //
+// let numero = Math.sqrt(25);
+// let numero = Math.cbrt(27);
+// let numero = Math.max(1,2,3,4,5,6,7,8,9);
+// let numero = Math.min(1,2,3,4,5,6,7,8,9);
+// let numero = Math.random()*100;
+//  numero = Math.round(numero);
+// numero = Math.floor(numero+1);
+// let numero = Math.fround(9,9999999999999999999999);
+// let numero = Math.trunc(9.9);
+
+// PROPIEDADES //
+// let numero = Math.PI;
+// let numero = Math.SQRT1_2;
+// let numero = Math.SQRT2;
+
+// let numero = Math.E;
+// let numero = Math.LN2;
+// let numero = Math.LN10;
+// let numero = Math.LOG2E;
+// let numero = Math.LOG10E;
+
+// document.write(numero);
+
+////////////////////////// EJERCICIO PRACTICO : CALCULADORA AVANZADA ///////////////////////////////////////
+/*
+class Calculadora {
+    constructor() {
+    }
+    sumar(num1, num2) {
+        return (num1 + num2);
+    }
+    restar(num1, num2) {
+        return (num1 - num2);
+    }
+    multiplicar(num1, num2) {
+        return (num1 * num2);
+    }
+    dividir(num1, num2) {
+        return (num1 / num2);
+    }
+    exponenciar(num1, exp) {
+        return (num1 ** exp);
+    }
+    raiz2(num1) {
+        return Math.sqrt(num1);
+    }
+    raiz3(num1) {
+        return Math.cbrt(num1);
+    }
+}
+
+const calculadora = new Calculadora();
+
+alert("Que operacion desear realizar?");
+let op = prompt("1: suma, 2: resta, 3: multiplicacion, 4: division, 5: exponenciar, 6: raiz2, 7: raiz3");
+
+if (op == 1) {
+    let num1 = parseFloat(prompt("Primer numero"));
+    let num2 = parseFloat(prompt("Segundo numero"));
+    resultado = calculadora.sumar(num1, num2);
+    alert(`El resultado es ${resultado}`);
+}
+else if (op == 2) {
+    let num1 = parseFloat(prompt("Primer numero"));
+    let num2 = parseFloat(prompt("Segundo numero"));
+    resultado = calculadora.restar(num1, num2);
+    alert(`El resultado es ${resultado}`);
+}
+else if (op == 3) {
+    let num1 = parseFloat(prompt("Primer numero"));
+    let num2 = parseFloat(prompt("Segundo numero"));
+    resultado = calculadora.multiplicar(num1, num2);
+    alert(`El resultado es ${resultado}`);
+}
+else if (op == 4) {
+    let num1 = parseFloat(prompt("Primer numero"));
+    let num2 = parseFloat(prompt("Segundo numero"));
+    resultado = calculadora.dividir(num1, num2);
+    alert(`El resultado es ${resultado}`);
+}
+else if (op == 5) {
+    let num1 = parseFloat(prompt("Numero Base"));
+    let exp = parseFloat(prompt("Exponente"));
+    resultado = calculadora.exponenciar(num1, exp);
+    alert(`El resultado es ${resultado}`);
+}
+else if (op == 6) {
+    let num1 = parseFloat(prompt("Numero"));
+    resultado = calculadora.raiz2(num1);
+    alert(`El resultado es ${resultado}`);
+}
+else if (op == 7) {
+    let num1 = parseFloat(prompt("Numero"));
+    resultado = calculadora.raiz3(num1);
+    alert(`El resultado es ${resultado}`);
+}
+else {
+    alert("La opcion no existe");
+}
+*/
+/////////////////// EJERCICIO PRACTICO : CLASES, ASIGNATURAS Y MAESTROS ////////////////////////////////////
+
+
+
+
+////////////////////////// EJERCICIO PRACTICO : MATRICULACION MATERIAS ///////////////////////////////////////
